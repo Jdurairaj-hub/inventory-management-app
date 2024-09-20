@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Inventory Management App
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This is a full-stack Inventory Management application built using **Next.js** (frontend), **Firebase** (backend), and **Material-UI** for UI components. The application provides functionalities to add, update, and manage inventory items seamlessly. It includes an image classification feature to detect objects from uploaded images and automatically adjust inventory counts.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Inventory Management**: Add, edit, delete, and view inventory items.
+- **Image Classification**: Uses a pre-trained **MobileNetV2** model to detect objects in images and adjust inventory counts automatically.
+- **Real-time Database**: Integrates with Firebase to handle real-time updates and data storage.
+- **Authentication**: Firebase Authentication for secure login and user management.
+- **UI Components**: Responsive and clean UI built using Material-UI.
+- **Scalability**: Designed to handle large inventories and real-time updates efficiently.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Next.js**: For building the frontend.
+- **Firebase**: For backend services (Firestore for data storage and Firebase Authentication).
+- **Material-UI**: For the UI components.
+- **MobileNetV2**: A machine learning model for image classification.
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Jdurairaj-hub/inventory-management-app.git
+   cd inventory-management-app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install the dependencies:
+   ```bash
+   npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. Start the  development server:
+   ```bash
+   npm run dev
 
-## Deploy on Vercel
+4. The app will be running on **http://localhost:3000**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Login/Signup**: Authenticate using your Firebase credentials.
+- **Add Inventory**: Click on "Add Item" to input new inventory data.
+- **Image Classification**: Upload an image, and the app will automatically check if the object exists in the inventory and update the count.
+- **Manage Inventory**: View, update, and delete inventory items from the dashboard.
+
+## Image Classification
+
+This app uses the **MobileNetV2** pre-trained model to classify objects from images. If the object in the image exists in the inventory, the app updates the quantity. Otherwise, a new inventory item is created.
+
+## Contributing
+
+If you'd like to contribute, feel free to fork the repository and make pull requests. Please ensure all changes are well documented.
+
+## License
+
+This project is licensed under the MIT License.
